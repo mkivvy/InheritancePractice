@@ -9,11 +9,10 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String jobTitle;
-    private char payFrequency; //B=bi-weekly, S=semi-monthly, M=monthly
+    private char payFrequency; //B=bi-weekly, S=semi-monthly
     private char empType;  //S=salary, H=hourly, B=salary+bonus
     public static final char BIWEEKLY = 'B';
     public static final char SEMIMONTHLY = 'S';
-    public static final char MONTHLY = 'M';
     public static final char SALARY_EMP = 'S';
     public static final char HOURLY_EMP = 'H';
     public static final char SALARY_BONUS_EMP = 'B';

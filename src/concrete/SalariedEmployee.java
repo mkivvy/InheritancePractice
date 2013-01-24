@@ -7,7 +7,7 @@ package concrete;
 public class SalariedEmployee extends Employee {
     private double annualSalary;
 
-    public SalariedEmployee(String firstName, String lastName, String jobTitle, char payFrequency, char empType) {
+    public SalariedEmployee(String firstName, String lastName, String jobTitle) {
         super(firstName, lastName, jobTitle, SEMIMONTHLY, SALARY_EMP);
         this.annualSalary = 0.0;
     }
@@ -21,6 +21,6 @@ public class SalariedEmployee extends Employee {
     }
   
     public double calcPeriodPay() {
-        return (annualSalary / 24);
+        return (annualSalary / 24.0);
     }
 }
