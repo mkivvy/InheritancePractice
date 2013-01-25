@@ -1,4 +1,4 @@
-package abstract1;
+package myabstract;
 
 /**
  *
