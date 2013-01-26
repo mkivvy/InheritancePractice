@@ -33,6 +33,7 @@ public class SalariedEmployee implements Employee{
         this.annualSalary = annualSalary;
     }
   
+    @Override
     public double calcPeriodPay() {
         return (annualSalary / 24.0);
     }

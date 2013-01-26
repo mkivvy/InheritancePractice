@@ -43,6 +43,7 @@ public class HourlyEmployee implements Employee {
         this.hoursWorked = hoursWorked;
     }
     
+    @Override
    public double calcPeriodPay() {
        return (hourlyRate * hoursWorked);
    } 
