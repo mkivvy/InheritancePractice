@@ -10,12 +10,6 @@ public class SalariedEmployee implements Employee{
     private String jobTitle;
     private char payFrequency; //B=bi-weekly, S=semi-monthly
     private char empType;  //S=salary, H=hourly, B=salary+bonus
-    public static final char BIWEEKLY = 'B';
-    public static final char SEMIMONTHLY = 'S';
-    public static final char SALARY_EMP = 'S';
-    public static final char HOURLY_EMP = 'H';
-    public static final char SALARY_BONUS_EMP = 'B';
-
     private double annualSalary;
 
     public SalariedEmployee(String firstName, String lastName, String jobTitle) {
@@ -25,10 +19,49 @@ public class SalariedEmployee implements Employee{
         this.annualSalary = 0.0;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public char getPayFrequency() {
+        return payFrequency;
+    }
+
+    public char getEmpType() {
+        return empType;
+    }
+
     public double getAnnualSalary() {
         return annualSalary;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
+    public void setPayFrequency(char payFrequency) {
+        this.payFrequency = payFrequency;
+    }
+
+    public void setEmpType(char empType) {
+        this.empType = empType;
+    }
     public void setAnnualSalary(double annualSalary) {
         this.annualSalary = annualSalary;
     }

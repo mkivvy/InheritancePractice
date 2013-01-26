@@ -12,7 +12,7 @@ public class TestAbstract {
 //        Employee[] empList = new Employee[6]; //2 salray, 2 hourly, 2 bonus
 
         //populate salary emps
-        SalariedEmployee s1 = new SalariedEmployee("Helena", "Handbasket", "Theatre Manager");
+        SalariedEmployee sal = new SalariedEmployee("Helena", "Handbasket", "Theatre Manager");
         //now why doesn't the following work????
 //        s1.setEmpType('S');
 //        s1.setPayFrequency('S');
