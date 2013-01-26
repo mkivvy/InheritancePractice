@@ -12,11 +12,9 @@ public class TestInterface {
 
         //populate salary emps
         SalariedEmployee s1 = new SalariedEmployee("Helena", "Handbasket", "Theatre Manager");
-        s1.setEmpType('S');
         s1.setPayFrequency('S');
         s1.setAnnualSalary(75000.00);
         SalariedEmployee s2 = new SalariedEmployee("Rayne", "Bow", "Lighting Manager");
-        s2.setEmpType('S');
         s2.setPayFrequency('S');
         s2.setAnnualSalary(100000.00);
 
@@ -30,13 +28,11 @@ public class TestInterface {
 
         //populate salary plus bonus emps
         SalaryPlusBonusEmployee b1 = new SalaryPlusBonusEmployee("Bob", "Fosse", "Choreographer");
-        b1.setEmpType('B');
         b1.setPayFrequency('S');
         b1.setAnnualSalary(200000.00);
         b1.setPayoutBonus(true);
         b1.setBonusAmt(3000.00);
         SalaryPlusBonusEmployee b2 = new SalaryPlusBonusEmployee("Ima", "Good", "Artistic Director");
-        b2.setEmpType('B');
         b2.setPayFrequency('S');
         b2.setAnnualSalary(150000.00);
         b2.setPayoutBonus(false);

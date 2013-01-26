@@ -4,7 +4,7 @@ package myinterface;
  *
  * @author Mary
  */
-public class SalaryPlusBonusEmployee extends SalariedEmployee implements Employee{
+public class SalaryPlusBonusEmployee extends SalariedEmployee {
     private boolean payoutBonus;
     private double bonusAmt;
 
@@ -32,12 +32,19 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee implements Employe
 
     @Override
     public double calcPeriodPay() {
+        double baseAmt;
+        if (getPayFrequency() == MONTHLY) 
+        {
+            baseAmt = (getAnnualSalary() / 12);
+        } else  //Monthly-salaried emps can only be paid monthly or semi-monthly
+        {
+            baseAmt = (getAnnualSalary() / 24);
+        }
         if (payoutBonus) {
             payoutBonus = false; //reset payout status
-            double baseAmt = (getAnnualSalary() / 24);
             return (baseAmt + bonusAmt);
         } else {
-            return (getAnnualSalary() / 24);
+            return (baseAmt);
         }
 
     }

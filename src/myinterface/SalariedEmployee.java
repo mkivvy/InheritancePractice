@@ -4,18 +4,19 @@ package myinterface;
  *
  * @author Mary
  */
-public class SalariedEmployee implements Employee{
+public class SalariedEmployee implements Employee {
+
     private String firstName;
     private String lastName;
     private String jobTitle;
     private char payFrequency; //B=bi-weekly, S=semi-monthly
-    private char empType;  //S=salary, H=hourly, B=salary+bonus
     private double annualSalary;
 
     public SalariedEmployee(String firstName, String lastName, String jobTitle) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.jobTitle = jobTitle;
+        this.payFrequency = SEMIMONTHLY;
         this.annualSalary = 0.0;
     }
 
@@ -33,10 +34,6 @@ public class SalariedEmployee implements Employee{
 
     public char getPayFrequency() {
         return payFrequency;
-    }
-
-    public char getEmpType() {
-        return empType;
     }
 
     public double getAnnualSalary() {
@@ -59,16 +56,19 @@ public class SalariedEmployee implements Employee{
         this.payFrequency = payFrequency;
     }
 
-    public void setEmpType(char empType) {
-        this.empType = empType;
-    }
     public void setAnnualSalary(double annualSalary) {
         this.annualSalary = annualSalary;
     }
-  
+
     @Override
     public double calcPeriodPay() {
-        return (annualSalary / 24.0);
+        if (payFrequency == MONTHLY) 
+        {
+            return (annualSalary / 12.0);
+        } else  //Monthly-salaried emps can only be paid monthly or semi-monthly
+        {
+            return (annualSalary / 24.0);
+        }
     }
 
-}
+    }

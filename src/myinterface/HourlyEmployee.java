@@ -9,7 +9,6 @@ public class HourlyEmployee implements Employee {
     private String lastName;
     private String jobTitle;
     private char payFrequency; //B=bi-weekly, S=semi-monthly
-    private char empType;  //S=salary, H=hourly, B=salary+bonus
     private double hourlyRate;
     private double hoursWorked;
 
@@ -37,11 +36,7 @@ public class HourlyEmployee implements Employee {
         return payFrequency;
     }
 
-    public char getEmpType() {
-        return empType;
-    }
-
-    public double getHourlyRate() {
+   public double getHourlyRate() {
         return hourlyRate;
     }
 
@@ -65,11 +60,7 @@ public class HourlyEmployee implements Employee {
         this.payFrequency = payFrequency;
     }
 
-    public void setEmpType(char empType) {
-        this.empType = empType;
-    }
-
-    public void setHourlyRate(double hourlyRate) {
+     public void setHourlyRate(double hourlyRate) {
         this.hourlyRate = hourlyRate;
     }
 
