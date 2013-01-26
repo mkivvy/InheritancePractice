@@ -24,7 +24,7 @@ public class TestConcrete {
         empList[1] = s2;
 
         //populate hourly emps
-        HourlyEmployee h1 = new HourlyEmployee("Anna", "Lyze", "Dancer");
+        HourlyEmployee h1 = new HourlyEmployee("Leah", "Tard", "Dancer");
         h1.setHourlyRate(20.00);
         h1.setHoursWorked(100.0);
         empList[2] = h1;

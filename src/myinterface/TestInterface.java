@@ -18,7 +18,7 @@ public class TestInterface {
         s2.setAnnualSalary(100000.00);
 
         //populate hourly emps
-        HourlyEmployee h1 = new HourlyEmployee("Anna", "Lyze", "Dancer");
+        HourlyEmployee h1 = new HourlyEmployee("Leah", "Tard", "Dancer");
         h1.setHourlyRate(20.00);
         h1.setHoursWorked(100.0);
         HourlyEmployee h2 = new HourlyEmployee("Cat", "Arwall", "Singer");

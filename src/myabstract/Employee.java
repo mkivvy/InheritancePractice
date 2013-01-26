@@ -73,4 +73,6 @@ public abstract class Employee {
     public void setEmpType(char empType) {
         this.empType = empType;
     }
+    
+    public abstract double calcPeriodPay();
 }

@@ -31,6 +31,7 @@ public class HourlyEmployee extends Employee {
         this.hoursWorked = hoursWorked;
     }
     
+    @Override
    public double calcPeriodPay() {
        return (hourlyRate * hoursWorked);
    } 
