@@ -7,6 +7,9 @@ import java.text.DecimalFormat;
  * @author Mary
  */
 public class TestInterface {
+
+    public static void main(String[] args) {
+
         //populate salary emps
         SalariedEmployee s1 = new SalariedEmployee("Helena", "Handbasket", "Theatre Manager");
         s1.setEmpType('S');
@@ -72,4 +75,5 @@ public class TestInterface {
 //        }
 //    }
 
+    }
 }

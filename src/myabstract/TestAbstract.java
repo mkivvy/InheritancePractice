@@ -8,15 +8,15 @@ import java.text.DecimalFormat;
  */
 public class TestAbstract {
 
+    public static void main(String[] args) {
 //Cannot instantiate abstract class - this has to go
 //        Employee[] empList = new Employee[6]; //2 salray, 2 hourly, 2 bonus
 
         //populate salary emps
-        SalariedEmployee sal = new SalariedEmployee("Helena", "Handbasket", "Theatre Manager");
-        //now why doesn't the following work????
-//        s1.setEmpType('S');
-//        s1.setPayFrequency('S');
-//        s1.setAnnualSalary(75000.00);
+        SalariedEmployee s1 = new SalariedEmployee("Helena", "Handbasket", "Theatre Manager");
+        s1.setEmpType('S');
+        s1.setPayFrequency('S');
+        s1.setAnnualSalary(75000.00);
         SalariedEmployee s2 = new SalariedEmployee("Rayne", "Bow", "Lighting Manager");
         s2.setEmpType('S');
         s2.setPayFrequency('S');
@@ -65,7 +65,7 @@ public class TestAbstract {
                         + dollar.format(empSal.getAnnualSalary()));
                 System.out.println("Pay Period Amount: $"
                         + dollar.format(empSal.calcPeriodPay()));
-            } else if (emps instanceof HourlyEmployee)  {
+            } else if (emps instanceof HourlyEmployee) {
                 System.out.println("Employee is HOURLY");
                 HourlyEmployee empHour = (HourlyEmployee) emps;
                 System.out.println("Hourly Rate: "
