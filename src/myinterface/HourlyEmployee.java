@@ -16,6 +16,7 @@ public class HourlyEmployee implements Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.jobTitle = jobTitle;
+        this.payFrequency = BIWEEKLY;
         this.hourlyRate = 0.0;
         this.hoursWorked = 0.0;
     }

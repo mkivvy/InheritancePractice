@@ -43,17 +43,33 @@ public class TestConcrete {
         empList[4] = b1;
         SalaryPlusBonusEmployee b2 = new SalaryPlusBonusEmployee("Ima", "Good", "Artistic Director");
         b2.setEmpType('B');
-        b2.setPayFrequency('S');
+        b2.setPayFrequency('M');
         b2.setAnnualSalary(150000.00);
         b2.setPayoutBonus(false);
         empList[5] = b2;
 
         DecimalFormat dollar = new DecimalFormat("#,##0.00");
+        char freqInd;
+        String payFreq;
         for (Employee emps : empList) {
             System.out.println("--------------------------------------");
             System.out.println("Name: " + emps.getLastName()
                     + ", " + emps.getFirstName());
             System.out.println("Job Title: " + emps.getJobTitle());
+            freqInd = emps.getPayFrequency();
+            switch (freqInd) {
+                case 'S':
+                    payFreq = "SEMI-MONTHLY";
+                    break;
+                case 'M':
+                    payFreq = "MONTHLY";
+                    break;
+                case 'B':
+                default:
+                    payFreq = "BIWEEKLY";
+            }
+            System.out.println("Employee is paid " + payFreq);
+
             if (emps instanceof SalaryPlusBonusEmployee) {
                 System.out.println("Employee is SALARY + BONUS");
                 SalaryPlusBonusEmployee empBon = (SalaryPlusBonusEmployee) emps;
@@ -70,7 +86,7 @@ public class TestConcrete {
                         + dollar.format(empSal.getAnnualSalary()));
                 System.out.println("Pay Period Amount: $"
                         + dollar.format(empSal.calcPeriodPay()));
-            } else if (emps instanceof HourlyEmployee)  {
+            } else if (emps instanceof HourlyEmployee) {
                 System.out.println("Employee is HOURLY");
                 HourlyEmployee empHour = (HourlyEmployee) emps;
                 System.out.println("Hourly Rate: "
