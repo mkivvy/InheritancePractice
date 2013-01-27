@@ -50,11 +50,27 @@ public class TestAbstract {
         empList[5] = b2;
 
         DecimalFormat dollar = new DecimalFormat("#,##0.00");
+        char freqInd;
+        String payFreq;
         for (Employee emps : empList) {
             System.out.println("--------------------------------------");
             System.out.println("Name: " + emps.getLastName()
                     + ", " + emps.getFirstName());
             System.out.println("Job Title: " + emps.getJobTitle());
+            freqInd = emps.getPayFrequency();
+            switch (freqInd) {
+                case 'S':
+                    payFreq = "SEMI-MONTHLY";
+                    break;
+                case 'M':
+                    payFreq = "MONTHLY";
+                    break;
+                case 'B':
+                default:
+                    payFreq = "BIWEEKLY";
+            }
+            System.out.println("Employee is paid " + payFreq);
+            
             if (emps instanceof SalaryPlusBonusEmployee) {
                 System.out.println("Employee is SALARY + BONUS");
                 SalaryPlusBonusEmployee empBon = (SalaryPlusBonusEmployee) emps;
