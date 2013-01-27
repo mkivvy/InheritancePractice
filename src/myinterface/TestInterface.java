@@ -52,23 +52,23 @@ public class TestInterface {
             System.out.println("Name: " + emps.getLastName()
                     + ", " + emps.getFirstName());
             System.out.println("Job Title: " + emps.getJobTitle());
+            freqInd = emps.getPayFrequency();
+            switch (freqInd) {
+                case 'S':
+                    payFreq = "SEMI-MONTHLY";
+                    break;
+                case 'M':
+                    payFreq = "MONTHLY";
+                    break;
+                case 'B':
+                default:
+                    payFreq = "BIWEEKLY";
+            }
+            System.out.println("Employee is paid " + payFreq);
 
             if (emps instanceof SalaryPlusBonusEmployee) {
                 System.out.println("Employee is SALARY + BONUS");
                 SalaryPlusBonusEmployee empBon = (SalaryPlusBonusEmployee) emps;
-                freqInd = empBon.getPayFrequency();
-                switch (freqInd) {
-                    case 'S':
-                        payFreq = "SEMI-MONTHLY";
-                        break;
-                    case 'M':
-                        payFreq = "MONTHLY";
-                        break;
-                    case 'B':
-                    default:
-                        payFreq = "BIWEEKLY";
-                }
-                System.out.println("Employee is paid " + payFreq);
                 System.out.println("Annual Salary: $"
                         + dollar.format(empBon.getAnnualSalary()));
                 System.out.println("Bonus Amount: $"
@@ -78,18 +78,6 @@ public class TestInterface {
             } else if (emps instanceof SalariedEmployee) {
                 System.out.println("Employee is SALARIED");
                 SalariedEmployee empSal = (SalariedEmployee) emps;
-                freqInd = empSal.getPayFrequency();
-                switch (freqInd) {
-                    case 'S':
-                        payFreq = "SEMI-MONTHLY";
-                        break;
-                    case 'M':
-                        payFreq = "MONTHLY";
-                        break;
-                    case 'B':
-                    default:
-                        payFreq = "BIWEEKLY";
-                }
                 System.out.println("Employee is paid " + payFreq);
                 System.out.println("Annual Salary: $"
                         + dollar.format(empSal.getAnnualSalary()));
@@ -98,18 +86,6 @@ public class TestInterface {
             } else if (emps instanceof HourlyEmployee) {
                 System.out.println("Employee is HOURLY");
                 HourlyEmployee empHour = (HourlyEmployee) emps;
-                freqInd = empHour.getPayFrequency();
-                switch (freqInd) {
-                    case 'S':
-                        payFreq = "SEMI-MONTHLY";
-                        break;
-                    case 'M':
-                        payFreq = "MONTHLY";
-                        break;
-                    case 'B':
-                    default:
-                        payFreq = "BIWEEKLY";
-                }
                 System.out.println("Employee is paid " + payFreq);
                 System.out.println("Hourly Rate: "
                         + dollar.format(empHour.getHourlyRate()));
